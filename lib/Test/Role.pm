@@ -1,10 +1,10 @@
 =head1 NAME
 
-Test::Roles - test that a class or object performs a role
+Test::Role - test that a class or object performs a role
 
 =head1 SYNOPSIS
 
- use Test::Roles;
+ use Test::Role;
 
  use Foo;
  does_ok(Foo, 'bar');
@@ -14,16 +14,16 @@ Test::Roles - test that a class or object performs a role
 
 =head1 DESCRIPTION
 
-Test::Roles provides a test for classes and object that implement roles
+Test::Role provides a test for classes and object that implement roles
 using the Class::Roles module.
 
-Test::Roles exports a single function B<does_ok>. B<does_ok> takes two
+Test::Role exports a single function B<does_ok>. B<does_ok> takes two
 required arguments: a class or object and a role which that class or object
 must perform. A third optional argument may be used to provide a more
 specific name of what is being testing (for example 'Test customer'). in the
 absence of this argument, 'the object' will be used instead.
 
-Test::Roles is implemented using Test::Builder, so it's tests integrate
+Test::Role is implemented using Test::Builder, so it's tests integrate
 seamlessly with other test modules such as Test::More and Test::Exception.
 
 =begin testing
@@ -107,7 +107,7 @@ use Class::Roles;
 require Exporter;
 use vars qw($VERSION @ISA @EXPORT %EXPORT_TAGS);
 
-$VERSION = 0.011_000;
+$VERSION = 0.012_000;
 @ISA     = 'Exporter';
 @EXPORT  = qw|does_ok|;
 
